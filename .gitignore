@@ -1,1 +1,7 @@
 mutants/
+__pycache__/
+*.pyc
+.coverage
+.pytest_cache/
+.mutmut-cache/
+mutants/
