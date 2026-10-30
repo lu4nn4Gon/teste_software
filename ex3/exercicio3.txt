@@ -1,0 +1,21 @@
+a) 
+
+Executei os testes e o mutmut gerou 24 mutantes
+Na primeira execução, 9 foram mortos e 15 sobreviveram
+
+b) 
+2 mutantes equivalentes: maior_9 e dia_do_maior_10, pois não alteram o resultado das funções
+Os outros 13 não eram equivalentes, pois poderiam modificar os resultados
+
+c) 
+
+acrescentei testes para listas vazias, diferentes posições da maior temperatura e valores repetidos
+
+* MS inicial: 9/24 = 37,5%
+* MS final: 22/24 = 91,67%
+* MS descontando os equivalentes: 22/22 = 100%
+
+d) 
+na função maior(), trocar > por >= não altera o maior valor retornado
+
+já em dia_do_maior() a alteração faz a função retornar a última ocorrência da maior temperatura, não a primeira

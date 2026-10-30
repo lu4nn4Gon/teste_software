@@ -1,0 +1,19 @@
+
+b) 
+A cobertura de ramos foi de 100%
+O MS inicial foi de 50%
+
+c) 
+
+fiz testes para os limites, valores exatos, mensagem de erro e arredondamento
+
+executei de novo -> 25 mutantes foram mortos e 1 sobreviveu
+ 
+considerei o sobrevivente equivalente, pois trocar n <= 3 por n < 3 não altera o resultado, já que os juros para 3 parcelas são zero
+
+MS final = 25 / (26 − 1) × 100 = 100%
+
+
+e) sim, a suíte mata esse mutante de segunda ordem, pois o teste com 12 parcelas detecta a alteração no limite permitido
+
+isso está relacionado ao efeito de acoplamento, discutido por Offutt (1992), segundo o qual testes capazes de detectar mutantes simples também tendem a detectar mutantes mais complexos

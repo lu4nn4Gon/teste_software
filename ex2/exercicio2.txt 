@@ -1,0 +1,35 @@
+a) 
+
+O teste passou e a cobertura ficou em 100%
+
+Quando executei o mutmut, foram gerados 16 mutantes, sendo que apenas 4 foram mortos e 12 sobreviveram
+
+O escore de mutação inicial foi de 25%
+
+
+b) 
+
+após mudança executei o mutmut novamente e consegui matar 13 dos 16 mutantes, ficando apenas 3 sobreviventes
+
+O escore de mutação aumentou para 81,25% e a cobertura continou em 100%
+
+c) 
+
+os três mutantes que sobreviveram estavam relacionados ao arredondamento do resultado.
+
+os mutantes 13 e 15 alteravam o arredondamento para um número inteiro, enquanto o mutante 16 arredondava para três casas decimais
+
+sobreviveram porque o teste utilizava valores que resultavam em 141, um número inteiro
+
+Para resolver acrescentei um teste com valores decimais, assim consegui matar os três mutantes restantes
+
+d) 
+
+acrescentei um teste com preço negativo 
+
+a suíte ficou com 3 testes, todos aprovados, e a cobertura continuou em 100%
+
+na execução do mutmut todos os 16 mutantes foram mortos
+
+MS = 16 / (16 - 0) × 100 = 100%
+

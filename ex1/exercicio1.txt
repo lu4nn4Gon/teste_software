@@ -1,0 +1,33 @@
+a)
+
+Comecei executando 2 testes e os dois passaram, mas a cobertura ficou em 64%
+
+Depois executei o mutmut, que gerou 36 mutantes -> 6 foram mortos e 30 sobreviveram
+
+b) 
+
+
+mutantes separados em grupos pela causa da vida:
+
+* 1 a 9 (relacionados à validação da média) estão vivos porque não testei médias inválidas e alguns valores-limite
+* 10 a 18 (relacionados à presença) estão vivos porque não testei valores inválidos
+* 19 a 23 (relacionados à reprovação por falta) estão vivoc porque não testei a presença no limite de 75% e abaixo dele
+* 24, 25 e 29 a 33 (relacionados à aprovação e recuperação) estão vivos porque não testei médias como 5 e 7
+
+Alguns mutantes sobreviveram porque estavam em partes do código que os testes iniciais sequer executavam, como as mensagens de erro, a recuperação e a reprovação por falta
+
+c) 
+
+Adicionei novos testes com médias 0, 5, 7 e 10, presenças 0, 74, 75 e 100, e também testes com valores inválidos
+
+Executei o mutmut novamente e, dessa vez, os 36 mutantes foram mortos
+
+MS = 36 / (36 - 0) × 100 = 100%
+
+
+d) 
+
+quando retirei o match do pytest.raises e executei o mutmut novamente, 4 mutantes sobreviveram e o escore caiu para 88,89%
+
+Isso porque esses mutantes alteravam a mensagem "Media invalida", mas continuavam gerando o erro ValueError
+e como o teste verificava apenas o tipo do erro, ele não percebia que a mensagem estava diferente
