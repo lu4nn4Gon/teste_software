@@ -28,3 +28,10 @@ def test_tipo_invalido():
 
     with pytest.raises(ValueError):
         fila.emitir("urgente")
+
+
+def test_chamar_fila_vazia():
+    fila = Fila()
+
+    with pytest.raises(IndexError):
+        fila.chamar()
