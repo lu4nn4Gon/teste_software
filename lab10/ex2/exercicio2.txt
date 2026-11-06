@@ -1,0 +1,31 @@
+a)
+
+lista de testes no arquivos listas_testes.txt
+
+
+c)
+
+O test_limite_duas_prioritarias verifica se, depois de duas prioritárias atendidas consecutivamente, uma senha normal é chamada quando existe alguma esperando.
+
+O test_reinicia_contagem_prioritarias  verifica se a contagem é reiniciada depois do atendimento de uma senha normal.
+
+
+d) 
+
+O teste test_prioritarias_sem_normais 
+
+
+
+e)
+
+Total de testes: 11
+Testes aprovados: 11
+Cobertura de linhas: 100%
+Cobertura de ramos: 100%
+
+Mutantes gerados: 48
+Mutantes mortos: 39
+Mutantes sobreviventes: 9
+
+Escore de mutação: 81,25%
+
