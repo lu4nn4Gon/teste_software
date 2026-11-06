@@ -39,3 +39,7 @@ def test_pontuacao():
 
 def test_pontuacao_nas_bordas():
     assert contar_palavras(",dia, ;dia;") == {"dia": 2}
+
+
+def test_dois_pontos_interrogacao():
+    assert contar_palavras(":dia: ?dia?") == {"dia": 2}
