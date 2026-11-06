@@ -2,7 +2,7 @@ def contar_palavras(texto):
     if not texto:
         return {}
 
-    palavras = texto.split()
+    palavras = texto.lower().split()
     contagem = {}
 
     for palavra in palavras:
