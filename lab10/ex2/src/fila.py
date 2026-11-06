@@ -13,3 +13,6 @@ class Fila:
             return f"N{self._contador_normal}"
 
         raise ValueError("Tipo de senha invalido")
+
+    def chamar(self):
+        raise IndexError("Fila vazia")
