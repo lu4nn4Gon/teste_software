@@ -25,4 +25,7 @@ class Fila:
         return len(self._normais) + len(self._prioritarias)
 
     def chamar(self):
+        if self._normais:
+            return self._normais.pop(0)
+
         raise IndexError("Fila vazia")
