@@ -1,0 +1,24 @@
+1. Verificar se a primeira senha normal emitida e N1
+e se as proximas seguem a numeracao N2, N3.
+
+2. Verificar se a primeira senha prioritaria e P1
+e se sua numeracao e independente das normais.
+
+3. Verificar se emitir um tipo invalido gera ValueError.
+
+4. Verificar se chamar uma fila vazia gera IndexError
+e se aguardando informa a quantidade correta de senhas.
+
+5. Verificar se as senhas do mesmo tipo sao atendidas
+na ordem em que foram emitidas.
+
+6. Verificar se as senhas prioritarias sao atendidas
+antes das normais e se, apos duas prioritarias
+consecutivas, uma normal e chamada.
+
+7. Verificar se a contagem de prioritarias consecutivas
+e zerada depois do atendimento de uma senha normal.
+
+8. Verificar se mais de duas prioritarias podem ser
+atendidas consecutivamente quando nao houver
+nenhuma senha normal esperando.

@@ -1,0 +1,55 @@
+a) 
+
+Ordem dos testes:
+1. Texto vazio
+2. Uma palavra
+3. Duas palavras diferentes
+4. Palavras repetidas
+5. Letras maiusculas e minusculas
+6. Quebra de linha
+7. Multiplos espacos
+8. Palavra com hifen
+9. Pontuacao no final das palavras
+10. Pontuacao nas duas bordas
+11. Dois-pontos e interrogacao
+12. Texto somente com pontuacao
+
+Coloquei primeiro o texto vazio porque é o caso mais simples! Uma vez que nao existem palavras para contar e o resultado deve ser um dicionario vazio
+
+Em segundo coloquei uma unica palavra, pois verifica se a funcao consegue identificar uma palavra e contar uma única ocorrencia
+
+
+
+c) 
+
+todos os commits GREEN tiveram um RED correspondente antes
+
+d)
+ testes que passaram na primeira execucao:
+
+- Palavras repetidas
+- Quebra de linha
+- Multiplos espacos
+- Palavra com hifen
+- Pontuacao nas duas bordas
+- Dois-pontos e interrogacao
+- Texto somente com pontuacao
+
+Passaram porque as funcionalidades necessarias ja tinham sido implementadas nos ciclos anteriores
+
+eles continuam na suite porque verificam comportamentos importantes da funcao e ajudam a evitar erros em futuras alteracoes
+
+
+e) 
+
+
+12 testes passaram.
+Cobertura de linhas: 100%.
+Cobertura de ramos: 100%.
+
+Total de mutantes: 15
+Mutantes mortos: 14
+Mutantes sobreviventes: 1
+
+Escore de mutacao: 93,33%.
+
