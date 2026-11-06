@@ -4,6 +4,7 @@ class Fila:
         self._contador_prioritaria = 0
         self._normais = []
         self._prioritarias = []
+        self._prioritarias_seguidas = 0
 
     def emitir(self, tipo):
         if tipo == "prioritaria":
@@ -25,10 +26,16 @@ class Fila:
         return len(self._normais) + len(self._prioritarias)
 
     def chamar(self):
+        if self._normais and self._prioritarias_seguidas >= 2:
+            self._prioritarias_seguidas = 0
+            return self._normais.pop(0)
+
         if self._prioritarias:
+            self._prioritarias_seguidas += 1
             return self._prioritarias.pop(0)
 
         if self._normais:
+            self._prioritarias_seguidas = 0
             return self._normais.pop(0)
 
         raise IndexError("Fila vazia")
