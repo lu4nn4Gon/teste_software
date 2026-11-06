@@ -27,9 +27,9 @@ def test_preco_zero():
 
 def test_cupom_dez():
     carrinho = Carrinho()
-    carrinho.adicionar(5000)
+    carrinho.adicionar(10000)
     carrinho.aplicar_cupom("DEZ")
-    assert carrinho.total == 4500
+    assert carrinho.total == 9000
 
 
 def test_cupom_invalido():
@@ -40,9 +40,10 @@ def test_cupom_invalido():
 
 def test_adicionar_depois_do_cupom():
     carrinho = Carrinho()
-    carrinho.adicionar(1000)
+    carrinho.adicionar(10000)
     carrinho.aplicar_cupom("DEZ")
-    assert carrinho.total == 900
+    carrinho.adicionar(1000)
+    assert carrinho.total == 9900
 
 
 def test_cupom_dez_abaixo_do_minimo():
