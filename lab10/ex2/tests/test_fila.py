@@ -86,3 +86,21 @@ def test_limite_duas_prioritarias():
     assert fila.chamar() == "N1"
     assert fila.chamar() == "P3"
     assert fila.aguardando == 0
+
+
+def test_reinicia_contagem_prioritarias():
+    fila = Fila()
+
+    fila.emitir("normal")
+    fila.emitir("normal")
+    fila.emitir("prioritaria")
+    fila.emitir("prioritaria")
+    fila.emitir("prioritaria")
+    fila.emitir("prioritaria")
+
+    assert fila.chamar() == "P1"
+    assert fila.chamar() == "P2"
+    assert fila.chamar() == "N1"
+    assert fila.chamar() == "P3"
+    assert fila.chamar() == "P4"
+    assert fila.chamar() == "N2"
