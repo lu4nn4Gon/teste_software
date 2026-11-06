@@ -35,3 +35,15 @@ def test_chamar_fila_vazia():
 
     with pytest.raises(IndexError):
         fila.chamar()
+
+
+def test_quantidade_aguardando():
+    fila = Fila()
+
+    assert fila.aguardando == 0
+
+    fila.emitir("normal")
+    assert fila.aguardando == 1
+
+    fila.emitir("prioritaria")
+    assert fila.aguardando == 2
