@@ -52,3 +52,11 @@ def test_cupom_dez_abaixo_do_minimo():
     carrinho.aplicar_cupom("DEZ")
 
     assert carrinho.total == 9999
+
+
+def test_cupom_dez_no_minimo_exato():
+    carrinho = Carrinho()
+    carrinho.adicionar(10000)
+    carrinho.aplicar_cupom("DEZ")
+
+    assert carrinho.total == 9000
