@@ -47,3 +47,16 @@ def test_quantidade_aguardando():
 
     fila.emitir("prioritaria")
     assert fila.aguardando == 2
+
+
+def test_ordem_atendimento_normal():
+    fila = Fila()
+
+    fila.emitir("normal")
+    fila.emitir("normal")
+    fila.emitir("normal")
+
+    assert fila.chamar() == "N1"
+    assert fila.chamar() == "N2"
+    assert fila.chamar() == "N3"
+    assert fila.aguardando == 0
