@@ -23,3 +23,7 @@ def test_maiusculas_minusculas():
 
 def test_quebra_de_linha():
     assert contar_palavras("bom\ndia") == {"bom": 1, "dia": 1}
+
+
+def test_multiplos_espacos():
+    assert contar_palavras("bom   dia") == {"bom": 1, "dia": 1}
