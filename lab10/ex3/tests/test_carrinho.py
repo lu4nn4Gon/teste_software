@@ -87,3 +87,11 @@ def test_segundo_cupom_substitui_primeiro():
 
     carrinho.aplicar_cupom("DEZ")
     assert carrinho.total == 27000
+
+
+@pytest.mark.parametrize("quantidade", [0, -1, 1.5, 2.5, "2"])
+def test_quantidade_invalida(quantidade):
+    carrinho = Carrinho()
+
+    with pytest.raises(ValueError):
+        carrinho.adicionar(1000, quantidade)
