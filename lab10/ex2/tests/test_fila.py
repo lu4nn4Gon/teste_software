@@ -1,3 +1,5 @@
+import pytest
+
 from fila import Fila
 
 
@@ -19,3 +21,10 @@ def test_numeracao_senhas_prioritarias():
     assert fila.emitir("prioritaria") == "P1"
     assert fila.emitir("normal") == "N2"
     assert fila.emitir("prioritaria") == "P2"
+
+
+def test_tipo_invalido():
+    fila = Fila()
+
+    with pytest.raises(ValueError):
+        fila.emitir("urgente")
