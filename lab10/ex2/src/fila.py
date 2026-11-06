@@ -8,5 +8,8 @@ class Fila:
             self._contador_prioritaria += 1
             return f"P{self._contador_prioritaria}"
 
-        self._contador_normal += 1
-        return f"N{self._contador_normal}"
+        if tipo == "normal":
+            self._contador_normal += 1
+            return f"N{self._contador_normal}"
+
+        raise ValueError("Tipo de senha invalido")
