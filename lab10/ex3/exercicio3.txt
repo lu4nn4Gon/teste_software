@@ -1,0 +1,26 @@
+
+a) 
+os  testes test_cupom_dez e test_adicionar_depois_do_cupom 
+
+antes de mudar o código, esses testes foram atualizados para representar as novas regras da loja
+
+
+c)
+
+os 17 testes continuaram passando após a reorganização, ou seja, não foi alterado o comportamento externo esperado
+
+d) 
+
+testei:
+
+- 1 = válida
+- 2 = válida
+- 0 = inválida
+- -1 =  inválida
+- 1.5 = inválida
+- 2.5 = inválida
+- "2": =inválida
+
+testei tambem valores inválidos devem gerar ValueError, pois a quantidade precisa ser inteira e maior ou igual a 1
+
+]
