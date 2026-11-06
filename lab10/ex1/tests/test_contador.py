@@ -31,3 +31,7 @@ def test_multiplos_espacos():
 
 def test_palavra_com_hifen():
     assert contar_palavras("guarda-chuva") == {"guarda-chuva": 1}
+
+
+def test_pontuacao():
+    assert contar_palavras("fim. Fim!") == {"fim": 2}
